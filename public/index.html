@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script src="/codemirror-5.65.0/lib/codemirror.js"></script>
+	<script src="/codemirror-5.65.0/mode/clike/clike.js"></script>
+	<link href="/codemirror-5.65.0/lib/codemirror.css" rel="stylesheet"/>
+	<link href="/codemirror-5.65.0/theme/lucario.css" rel="stylesheet"/>
+     
+    <style>
+    .CodeMirror:not(.CodeMirror-focused) .CodeMirror-cursors {visibility: visible !important;}
+    </style>
+    
+</head>
+<body>
+
+
+    <textarea id="editor"></textarea>
+
+    <button type="button" onclick="showDelay()">Show Delay</button>    
+    <button type="button" onclick="makeDelay()">Delay User</button>
+    <button type="button" onclick="resetDelay()">Reset Delay</button>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/lseqtree/build/lseqtree.bundle.js"></script>
+<script src="/main.js"></script>
+</body>
+</html>
