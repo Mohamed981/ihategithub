@@ -5,27 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-	<script src="/codemirror-5.65.0/lib/codemirror.js"></script>
-	<script src="/codemirror-5.65.0/mode/clike/clike.js"></script>
-	<link href="/codemirror-5.65.0/lib/codemirror.css" rel="stylesheet"/>
-	<link href="/codemirror-5.65.0/theme/lucario.css" rel="stylesheet"/>
-     
-    <style>
-    .CodeMirror:not(.CodeMirror-focused) .CodeMirror-cursors {visibility: visible !important;}
-    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/clike/clike.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/lucario.min.css"/>
     
 </head>
 <body>
+    <p>Hello world</p>
+    <div class="roomControl">
+        <div class="create-new-room">
+            <button type="button" onclick="createRoom()">Create new room</button>
+            <p1 id="currentRoom"></p1>
+            <p1 id="roomId"></p1> 
+            <button id="copyRoomID" type="button" onclick="copyRoomID()" style="visibility: hidden;">Copy</button>
+        </div>
+        <div class="join-another-room">
+        <p>Join another room</p>
+        <textarea id="otherRoomId" placeholder="Put the ID of the room you to join" rows="1" cols = "36" style="resize: none;"></textarea>
+        <button type="button" onclick="pasteRoomId()">Paste</button>
+        <button type="button" onclick="joinRoom()">Join</button>
+        </div>
+        <!-- <div class="Files">
+            <p>Type file name</p>
+            <textarea id="fileName" style="resize:none;"></textarea>
+            <button type ="button" onclick="readFileName()">Read</button>
+        </div> -->
+    </div>
+    <br><br>
+    <div class="editorArea">
+        <button type ="button" onclick="File1()">File1</button>
+        <button type ="button" onclick="File2()">File2</button>
+        <textarea id="editor"></textarea>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/webRTC/RTCMultiConnection.min.js"></script>
+    <script src="/lseqtree/build/lseqtree.bundle.js" ></script>
+    <script src="/client.js"async defer></script>
+    <script src="/editor.js"></script>
+    
 
 
-    <textarea id="editor"></textarea>
-
-    <button type="button" onclick="showDelay()">Show Delay</button>    
-    <button type="button" onclick="makeDelay()">Delay User</button>
-    <button type="button" onclick="resetDelay()">Reset Delay</button>
-
-<script src="/socket.io/socket.io.js"></script>
-<script src="/lseqtree/build/lseqtree.bundle.js"></script>
-<script src="/main.js"></script>
 </body>
 </html>
