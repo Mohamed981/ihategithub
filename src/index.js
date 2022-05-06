@@ -51,34 +51,6 @@ function setListeners() {
         if (currentSocketId && currentRoomId);
         localChange(changeObject);
     })
-    // editor_manager.instance.on("keyHandled",(instance,value,event)=>
-    // {
-    //     console.log(value)
-    //     if(value==="Ctrl-A")
-    //     {   
-    //         // editor_manager.instance.focus();
-    //         // let pos = instance.getCursor();
-    //         // editor_manager.instance.setSelection(pos);
-
-    //         //let test = editor_manager.instance.getInputField();
-    //         // test.dispatchEvent(new KeyboardEvent('keydown', {'key':'Shift'} ));
-    //         // test.dispatchEvent(new KeyboardEvent('keydown', {'key':'Left'} ));
-    //         // test.dispatchEvent(new KeyboardEvent( 'keyup' , {'key':'Left'} )); //To mimic keypress 
-    //         // test.dispatchEvent(new KeyboardEvent( 'keyup' , {'key':'Shift'} )); //To mimic keypress 
-    //         //editor_manager.instance.execCommand("selectAll")
-    //         // editor_manager.instance.setSelection({line:0,ch:0})
-          
-
-    //         // editor_manager.instance.setExtending(true);
-    //         // editor_manager.instance.extendSelection({line:0,ch:0},{line:0,ch:1});
-    
-    //     }
-            
-
-    // })
-    // editor_manager.instance.on("electricInput",(instance,changeObject)=>{
-    //     console.log(changeObject)
-    // })
     connection.onmessage = function (event) {
         remoteChange(event.data)
     }
