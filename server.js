@@ -15,10 +15,8 @@ const io = socketio(server)
 app.use(express.static(path.join(__dirname,"dist")))
 
 
-
 let currentSocketId= undefined;
 let currentRoomId = undefined;
-
 
 let current_trees = [];
 let lseq_server = new LSeqTree(50000);
