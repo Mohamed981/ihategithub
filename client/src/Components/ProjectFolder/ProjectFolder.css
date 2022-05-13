@@ -1,0 +1,79 @@
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+  }
+  
+  body {
+    color: rgb(0, 0, 0);
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .project-folder-content {
+    margin-left: 150px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    border-radius: 20px;
+    width: 300px;
+    height: 150px;
+  }
+
+  .project-folder-content:hover{
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition-speed);
+  }
+  
+  .folder{
+      margin-left: 20px;
+      margin-top: 20px;
+  }
+  .text{
+      height: 10px;
+      margin-top: 0cm;
+      margin-left: 20px;
+      color: white;
+  }
+  .files{
+    margin-top: 1ch;
+    margin-left: 20px;
+    padding-top: 1px;
+    color: var(--text-primary);
+    height: 2ch;
+  }
+  .files2{
+    margin-top: 2ch;
+    margin-left: 20px;
+    padding-top: 1px;
+    color: var(--text-primary);
+    height: 2ch;
+  }
+  .vl {
+    margin-left: 50px;
+    position: relative;
+    border-left: 3px solid rgb(255, 255, 255);
+    height: 100px;
+  }
+ 
+  /* Clear floats after the columns */
+
+  /* Large screens */
+  @media only screen and (min-width: 600px) {
+    .navbar {
+      top: 0;
+      width: 7rem;
+      height: 100vh;
+    }
+  
+}

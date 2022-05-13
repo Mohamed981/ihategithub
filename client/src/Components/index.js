@@ -1,0 +1,10 @@
+export { default as SideBar } from './sidebar/sidebar';
+export { default as Signin } from '../Pages/Signin';
+export { default as Signup } from '../Pages/Signup';
+export { default as Projects } from '../Pages/Projects/Projects';
+export { default as Tasks } from '../Pages/Tasks/Tasks';
+export { default as Teams } from '../Pages/Teams/Teams';
+export { default as IDE } from '../Pages/IDE/IDE';
+export { default as Home } from '../Pages/Home/Home';
+export { default as Welcome } from '../Pages/Welcome';
+export { default as NotFound } from '../Pages/NotFound/NotFound';
